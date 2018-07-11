@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Monospacer"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "A small framework to generate monospaced fonts."
 
   s.description  = <<-DESC

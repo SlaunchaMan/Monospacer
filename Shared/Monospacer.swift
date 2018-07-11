@@ -24,7 +24,7 @@ private let fontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdent
 private let fontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selectorIdentifier
 private let fontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
 #else
-#error("Unsupported platform")
+#warning("Unsupported platform")
 #endif
 
 extension Font {
