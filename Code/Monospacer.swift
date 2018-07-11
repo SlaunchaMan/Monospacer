@@ -28,12 +28,20 @@ private let fontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeN
 extension Font {
 
     #if canImport(UIKit)
+    /// Creates and returns the same font, but with monospaced digits.
+    ///
+    /// - Note: Not all fonts support this feature. If called on a font that doesn’t
+    ///         support monospaced digits, this will return the same font.
     @objc(fontWithMonospaceDigits)
     public var withMonospaceDigits: Font {
         return Font(descriptor: fontDescriptor.withMonospaceDigits,
                     size: pointSize)
     }
     #elseif canImport(AppKit)
+    /// Creates and returns the same font, but with monospaced digits.
+    ///
+    /// - Note: Not all fonts support this feature. If called on a font that doesn’t
+    ///         support monospaced digits, this will return the same font.
     @objc(fontWithMonospaceDigits)
     public var withMonospaceDigits: Font? {
         return Font(descriptor: fontDescriptor.withMonospaceDigits,
@@ -44,6 +52,7 @@ extension Font {
 
 extension FontDescriptor {
 
+    /// Returns the font descriptor with the “Monospaced Numbers” selector applied.
     @objc(descriptorForMonospaceDigits)
     public var withMonospaceDigits: FontDescriptor {
         let featureSettings = [
