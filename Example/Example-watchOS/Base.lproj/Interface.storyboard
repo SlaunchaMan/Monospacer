@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="14295.6" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14234.1"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Example_watchOS" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="Monospaced:" id="lAE-md-134">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="left" text="11 22 33 44 55 66 77 88  99" minimumScaleFactor="0.5" id="rMN-Cp-hTC">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label alignment="left" text="99 88 77 66 55 44 33 22 11" minimumScaleFactor="0.5" id="zb2-ZD-PVJ"/>
+                        <label alignment="left" text="Regular:" id="pP2-hc-7SN">
+                            <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
+                        </label>
+                        <label alignment="left" text="11 22 33 44 55 66 77 88  99" minimumScaleFactor="0.5" id="wot-Qv-OLt">
+                            <fontDescription key="font" style="UICTFontTextStyleBody"/>
+                        </label>
+                        <label alignment="left" text="99 88 77 66 55 44 33 22 11" minimumScaleFactor="0.5" id="1Px-gY-O0n"/>
+                    </items>
+                    <connections>
+                        <outlet property="firstLabel" destination="rMN-Cp-hTC" id="NXh-jt-QpB"/>
+                        <outlet property="secondLabel" destination="zb2-ZD-PVJ" id="c62-E7-t36"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-80" y="31"/>
+        </scene>
+    </scenes>
+</document>
