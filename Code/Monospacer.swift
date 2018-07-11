@@ -23,8 +23,6 @@ public typealias FontDescriptor = NSFontDescriptor
 private let fontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
 private let fontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selectorIdentifier
 private let fontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
-#else
-#warning("Unsupported platform")
 #endif
 
 extension Font {
