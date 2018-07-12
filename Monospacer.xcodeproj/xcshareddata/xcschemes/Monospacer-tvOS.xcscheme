@@ -46,7 +46,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1F36CDBF20F701F800C2A49A"
-               BuildableName = "MonospacerTests-tvOS.xctest"
+               BuildableName = "MonospacerTests.xctest"
                BlueprintName = "MonospacerTests-tvOS"
                ReferencedContainer = "container:Monospacer.xcodeproj">
             </BuildableReference>

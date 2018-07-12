@@ -26,9 +26,41 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      codeCoverageEnabled = "YES"
+      onlyGenerateCoverageForSpecifiedTargets = "YES"
       shouldUseLaunchSchemeArgsEnv = "YES">
+      <CodeCoverageTargets>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1F83D9E720F67F15009B681E"
+            BuildableName = "Monospacer.framework"
+            BlueprintName = "Monospacer-macOS"
+            ReferencedContainer = "container:Monospacer.xcodeproj">
+         </BuildableReference>
+      </CodeCoverageTargets>
       <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES"
+            testExecutionOrdering = "random">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "1F36CDCF20F703B100C2A49A"
+               BuildableName = "MonospacerTests.xctest"
+               BlueprintName = "MonospacerTests-macOS"
+               ReferencedContainer = "container:Monospacer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "1F83D9E720F67F15009B681E"
+            BuildableName = "Monospacer.framework"
+            BlueprintName = "Monospacer-macOS"
+            ReferencedContainer = "container:Monospacer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
