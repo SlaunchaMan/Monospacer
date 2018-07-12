@@ -11,18 +11,18 @@ import UIKit
 public typealias Font = UIFont
 public typealias FontDescriptor = UIFontDescriptor
 
-private let fontFeatureTypeIdentifierKey = UIFontDescriptor.FeatureKey.featureIdentifier
-private let fontFeatureSelectorIdentifierKey = UIFontDescriptor.FeatureKey.typeIdentifier
-private let fontDescriptorFeatureSettingsAttribute = UIFontDescriptor.AttributeName.featureSettings
+internal let fontFeatureTypeIdentifierKey = UIFontDescriptor.FeatureKey.featureIdentifier
+internal let fontFeatureSelectorIdentifierKey = UIFontDescriptor.FeatureKey.typeIdentifier
+internal let fontDescriptorFeatureSettingsAttribute = UIFontDescriptor.AttributeName.featureSettings
 #elseif canImport(AppKit)
 import AppKit
 
 public typealias Font = NSFont
 public typealias FontDescriptor = NSFontDescriptor
 
-private let fontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
-private let fontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selectorIdentifier
-private let fontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
+internal let fontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
+internal let fontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.selectorIdentifier
+internal let fontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
 #endif
 
 extension Font {
@@ -65,6 +65,20 @@ extension FontDescriptor {
         ]
 
         return addingAttributes(attributes)
+    }
+
+    /// Returns `true` if the font descriptor has the selector for monospaced digits
+    /// enabled.
+    @objc public var hasMonospacedFontSelector: Bool {
+        guard
+            let featureSettings = fontAttributes[fontDescriptorFeatureSettingsAttribute]
+                as? [[String: Int]]
+            else { return false }
+
+        return featureSettings.contains(where: { settings -> Bool in
+            return settings[fontFeatureTypeIdentifierKey.rawValue] == kNumberSpacingType &&
+                settings[fontFeatureSelectorIdentifierKey.rawValue] == kMonospacedNumbersSelector
+        })
     }
 
 }

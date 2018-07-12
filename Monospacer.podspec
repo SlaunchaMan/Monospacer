@@ -15,7 +15,7 @@ fonts.
   s.homepage           = "https://github.com/SlaunchaMan/Monospacer"
 
   s.module_name = "Monospacer"
-  s.swift_version = "4.1"
+  s.swift_version = "4.0"
 
   s.osx.deployment_target = "10.9"
   s.ios.deployment_target = "8.0"
