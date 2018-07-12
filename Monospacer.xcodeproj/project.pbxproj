@@ -90,6 +90,7 @@
 		1F36CDB520F6F88100C2A49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F36CDC020F701F800C2A49A /* MonospacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonospacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F36CDD020F703B100C2A49A /* MonospacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonospacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F36CDE020F7054900C2A49A /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		1F83D9BB20F67D73009B681E /* Monospacer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Monospacer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F83D9BE20F67D73009B681E /* Monospacer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Monospacer.h; sourceTree = "<group>"; };
 		1F83D9BF20F67D73009B681E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				1FDB0C4E20F6A60F009F1B02 /* README.md */,
+				1F36CDE020F7054900C2A49A /* CHANGELOG.md */,
 				1F02EDD320F689CC006D9AFD /* Monospacer.podspec */,
 				1F02EE6420F69722006D9AFD /* Example.xcodeproj */,
 				1F83D9DE20F67DD8009B681E /* Code */,
