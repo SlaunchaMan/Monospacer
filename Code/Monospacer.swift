@@ -8,7 +8,10 @@
 #if canImport(UIKit)
 import UIKit
 
+/// A `typealias` for `UIFont` that helps cross-platform support.
 public typealias Font = UIFont
+
+/// A `typealias` for `UIFontDescriptor` that helps cross-platform support.
 public typealias FontDescriptor = UIFontDescriptor
 
 internal let fontFeatureTypeIdentifierKey = UIFontDescriptor.FeatureKey.featureIdentifier
@@ -18,7 +21,9 @@ internal let fontDescriptorFeatureSettingsAttribute = UIFontDescriptor.Attribute
 #elseif canImport(AppKit)
 import AppKit
 
+/// A `typealias` for `NSFont` that helps cross-platform support.
 public typealias Font = NSFont
+/// A `typealias` for `NSFontDescriptor` that helps cross-platform support.
 public typealias FontDescriptor = NSFontDescriptor
 
 internal let fontFeatureTypeIdentifierKey = NSFontDescriptor.FeatureKey.typeIdentifier
@@ -26,6 +31,7 @@ internal let fontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.sele
 internal let fontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
 #endif
 
+/// Errors that can be thrown when modifying a font.
 @objc public enum MonospacerError: Int, Error {
     /// Thrown when the font does not support monospaced digits.
     case fontUnsupported

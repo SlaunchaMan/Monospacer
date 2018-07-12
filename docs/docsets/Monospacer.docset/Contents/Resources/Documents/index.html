@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Monospacer  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Monospacer  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Monospacer Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/SlaunchaMan/Monospacer"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Monospacer Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Monospacer  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/MonospacerError.html">MonospacerError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Font.html">Font</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/FontDescriptor.html">FontDescriptor</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/Font">Font</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10Monospacer4Fonta">Font</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/FontDescriptor">FontDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10Monospacer14FontDescriptora">FontDescriptor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='monospacer' class='heading'>Monospacer</h1>
+
+<p>A framework for macOS, iOS, tvOS, and watchOS to create monospaced variants of fonts.</p>
+
+<p><a href="https://cocoapods.org/pods/Monospacer"><img src="https://img.shields.io/cocoapods/v/Monospacer.svg?style=flat" alt="Version"></a>
+<img src="docs/badge.svg" alt="Documentation">
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://github.com/SlaunchaMan/Monospacer/blob/master/LICENSE"><img src="https://img.shields.io/cocoapods/l/Monospacer.svg?style=flat" alt="License"></a>
+<img src="https://img.shields.io/cocoapods/p/Monospacer.svg?style=flat" alt="Platform"></p>
+<h1 id='installation' class='heading'>Installation</h1>
+<h2 id='cocoapods' class='heading'>CocoaPods</h2>
+
+<p>To use Monospacer with <a href="https://cocoapods.org">CocoaPods</a>, add a dependency to your <code>Podfile</code>:</p>
+<pre class="highlight plaintext"><code>target 'MyAwesomeApp' do
+  pod 'Monospacer'
+end
+</code></pre>
+
+<p>Then run <code>pod install</code> and use the generated <code>.xcworkspace</code> to open your project.</p>
+<h2 id='carthage' class='heading'>Carthage</h2>
+
+<p>To use Monospacer with <a href="https://github.com/Carthage/Carthage">Carthage</a>, add a dependency to your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "SlaunchaMan/Monospacer"
+</code></pre>
+
+<p>Run <code>carthage update</code> to build the framework. Then follow the rest of the steps in <a href="https://github.com/Carthage/Carthage#getting-started">Carthage’s README</a> to add the framework to your project, configure a Run Script build phase, etc.</p>
+<h2 id='manually' class='heading'>Manually</h2>
+
+<p>To integrate Monospacer manually into your project, drag <code>Monospacer.xcodeproj</code> into your Xcode project, then use the correct <code>Monospacer.framework</code> for your platform.</p>
+<h1 id='using-monospacer' class='heading'>Using Monospacer</h1>
+<h2 id='swift' class='heading'>Swift</h2>
+
+<p>To use Monospacer, use the extension on <code>UIFont</code> (<code>NSFont</code> for macOS):</p>
+<pre class="highlight plaintext"><code>let newFont = try? myFont.withMonospaceDigits()
+</code></pre>
+
+<p>You can also use this on a font descriptor to add the monospaced digits attribute (useful if you need to perform other modifications to the descriptor before using it to create a font):</p>
+<pre class="highlight plaintext"><code>let newFontDescriptor = myFontDescrpitor.withMonospaceDigits
+</code></pre>
+<h2 id='objective-c' class='heading'>Objective-C</h2>
+
+<p>Monospacer also works with Objective-C:</p>
+<pre class="highlight plaintext"><code>UIFont *newFont = [myFont fontWithMonospaceDigitsError:NULL];
+
+UIFontDescriptor *newFontDescriptor = myFontDescriptor.descriptorForMonospaceDigits;
+</code></pre>
+<h2 id='error-handling' class='heading'>Error Handling</h2>
+
+<p>Not all fonts support monospaced digits. In the case where a font doesn’t support this feature, Monospacer throws a <code><a href="Enums/MonospacerError.html#/c:@M@Monospacer@E@MonospacerError@MonospacerErrorFontUnsupported">MonospacerError.fontUnsupported</a></code> error. On macOS, if font creations fails, Monospacer throws a <code><a href="Enums/MonospacerError.html#/fontCreationFailed">MonospacerError.fontCreationFailed</a></code> error.  You can handle these in Swift or Objective-C:</p>
+<pre class="highlight plaintext"><code>// Swift
+do {
+    let font = try someFont.withMonospaceDigits()
+
+    firstLabel.font = font
+    secondLabel.font = font
+}
+catch MonospacerError.fontUnsupported {
+    NSLog("Whoops! This font isn't supported!")
+}
+catch MonospacerError.fontCreationFailed {
+    NSLog("Uh-oh. Creating this font failed.")
+}
+catch {
+    fatalError("Unexpected error: \(error.localizedDescription)")
+}
+</code></pre>
+<pre class="highlight plaintext"><code>// Objective-C
+NSError *error = nil;
+UIFont *font = [font fontWithMonospaceDigitsError:&amp;error];
+
+if (font == nil) {
+    if (error.domain == MonospacerErrorDomain &amp;&amp;
+        error.code == MonospacerErrorFontUnsupported) {
+        NSLog(@"Whoops! This font isn't supported!");
+    }
+}
+</code></pre>
+
+<p>If you don’t care about the errors, you can safely ignore them:</p>
+<pre class="highlight plaintext"><code>let newFont = try? font.withMonospaceDigits()
+
+myLabel.font = newFont ?? font
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2018 <a class="link" href="https://github.com/SlaunchaMan/Monospacer" target="_blank" rel="external">Jeff Kelley</a>. All rights reserved. (Last updated: 2018-07-12)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
