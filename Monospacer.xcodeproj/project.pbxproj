@@ -10,6 +10,8 @@
 		1F02EDD420F68B05006D9AFD /* Monospacer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F83D9BE20F67D73009B681E /* Monospacer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F02EDD520F68B05006D9AFD /* Monospacer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F83D9BE20F67D73009B681E /* Monospacer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F02EDD620F68B05006D9AFD /* Monospacer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F83D9BE20F67D73009B681E /* Monospacer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1F36CDB420F6F88100C2A49A /* MonospacerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F36CDB320F6F88100C2A49A /* MonospacerTests.swift */; };
+		1F36CDB620F6F88100C2A49A /* Monospacer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F83D9BB20F67D73009B681E /* Monospacer.framework */; };
 		1F83D9C020F67D73009B681E /* Monospacer.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F83D9BE20F67D73009B681E /* Monospacer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1F83D9E020F67DE7009B681E /* Monospacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83D9DF20F67DE7009B681E /* Monospacer.swift */; };
 		1F83D9E120F67DE7009B681E /* Monospacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F83D9DF20F67DE7009B681E /* Monospacer.swift */; };
@@ -53,11 +55,21 @@
 			remoteGlobalIDString = 1F02EE1520F692C9006D9AFD;
 			remoteInfo = "Example-tvOS";
 		};
+		1F36CDB720F6F88100C2A49A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1F83D9B020F67D53009B681E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1F83D9BA20F67D73009B681E;
+			remoteInfo = "Monospacer-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1F02EDD320F689CC006D9AFD /* Monospacer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Monospacer.podspec; sourceTree = "<group>"; };
 		1F02EE6420F69722006D9AFD /* Example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Example.xcodeproj; path = Example/Example.xcodeproj; sourceTree = "<group>"; };
+		1F36CDB120F6F88100C2A49A /* MonospacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonospacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F36CDB320F6F88100C2A49A /* MonospacerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonospacerTests.swift; sourceTree = "<group>"; };
+		1F36CDB520F6F88100C2A49A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F83D9BB20F67D73009B681E /* Monospacer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Monospacer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F83D9BE20F67D73009B681E /* Monospacer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Monospacer.h; sourceTree = "<group>"; };
 		1F83D9BF20F67D73009B681E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,6 +81,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		1F36CDAE20F6F88100C2A49A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F36CDB620F6F88100C2A49A /* Monospacer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F83D9B820F67D73009B681E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -112,6 +132,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		1F36CDB220F6F88100C2A49A /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				1F36CDB320F6F88100C2A49A /* MonospacerTests.swift */,
+				1F36CDB520F6F88100C2A49A /* Info.plist */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
 		1F83D9AF20F67D53009B681E = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +148,7 @@
 				1F02EDD320F689CC006D9AFD /* Monospacer.podspec */,
 				1F02EE6420F69722006D9AFD /* Example.xcodeproj */,
 				1F83D9DE20F67DD8009B681E /* Code */,
+				1F36CDB220F6F88100C2A49A /* Tests */,
 				1FE3A37320F69B4A00723608 /* Supporting Files */,
 				1F83D9BC20F67D73009B681E /* Products */,
 			);
@@ -131,6 +161,7 @@
 				1F83D9C920F67D96009B681E /* Monospacer.framework */,
 				1F83D9D620F67D9E009B681E /* Monospacer.framework */,
 				1F83D9E820F67F15009B681E /* Monospacer.framework */,
+				1F36CDB120F6F88100C2A49A /* MonospacerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,6 +221,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		1F36CDB020F6F88100C2A49A /* MonospacerTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1F36CDB920F6F88100C2A49A /* Build configuration list for PBXNativeTarget "MonospacerTests-iOS" */;
+			buildPhases = (
+				1F36CDAD20F6F88100C2A49A /* Sources */,
+				1F36CDAE20F6F88100C2A49A /* Frameworks */,
+				1F36CDAF20F6F88100C2A49A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1F36CDB820F6F88100C2A49A /* PBXTargetDependency */,
+			);
+			name = "MonospacerTests-iOS";
+			productName = "MonospacerTests-iOS";
+			productReference = 1F36CDB120F6F88100C2A49A /* MonospacerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		1F83D9BA20F67D73009B681E /* Monospacer-iOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F83D9C120F67D73009B681E /* Build configuration list for PBXNativeTarget "Monospacer-iOS" */;
@@ -271,6 +320,9 @@
 				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 1000;
 				TargetAttributes = {
+					1F36CDB020F6F88100C2A49A = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					1F83D9BA20F67D73009B681E = {
 						CreatedOnToolsVersion = 10.0;
 						LastSwiftMigration = 1000;
@@ -311,6 +363,7 @@
 				1F83D9C820F67D96009B681E /* Monospacer-watchOS */,
 				1F83D9D520F67D9E009B681E /* Monospacer-tvOS */,
 				1F83D9E720F67F15009B681E /* Monospacer-macOS */,
+				1F36CDB020F6F88100C2A49A /* MonospacerTests-iOS */,
 			);
 		};
 /* End PBXProject section */
@@ -354,6 +407,13 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		1F36CDAF20F6F88100C2A49A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F83D9B920F67D73009B681E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,6 +445,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		1F36CDAD20F6F88100C2A49A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1F36CDB420F6F88100C2A49A /* MonospacerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1F83D9B720F67D73009B681E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -419,14 +487,160 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1F36CDB820F6F88100C2A49A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1F83D9BA20F67D73009B681E /* Monospacer-iOS */;
+			targetProxy = 1F36CDB720F6F88100C2A49A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1F36CDBA20F6F88100C2A49A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = UCFNS9576M;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.MonospacerTests;
+				PRODUCT_NAME = MonospacerTests;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1F36CDBB20F6F88100C2A49A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = UCFNS9576M;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.MonospacerTests;
+				PRODUCT_NAME = MonospacerTests;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		1F83D9B420F67D53009B681E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_MODULE_NAME = Monospacer;
-				PRODUCT_NAME = Monospacer;
 				SWIFT_VERSION = 4.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -438,8 +652,6 @@
 			buildSettings = {
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_MODULE_NAME = Monospacer;
-				PRODUCT_NAME = Monospacer;
 				SWIFT_VERSION = 4.0;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				WATCHOS_DEPLOYMENT_TARGET = 2.0;
@@ -515,6 +727,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Monospacer;
+				PRODUCT_MODULE_NAME = Monospacer;
+				PRODUCT_NAME = Monospacer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -588,6 +802,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Monospacer;
+				PRODUCT_MODULE_NAME = Monospacer;
+				PRODUCT_NAME = Monospacer;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -670,6 +886,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Monospacer;
+				PRODUCT_MODULE_NAME = Monospacer;
+				PRODUCT_NAME = Monospacer;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -744,6 +962,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Monospacer;
+				PRODUCT_MODULE_NAME = Monospacer;
+				PRODUCT_NAME = Monospacer;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -825,6 +1045,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Monospacer;
+				PRODUCT_MODULE_NAME = Monospacer;
+				PRODUCT_NAME = Monospacer;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -898,6 +1120,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Monospacer;
+				PRODUCT_MODULE_NAME = Monospacer;
+				PRODUCT_NAME = Monospacer;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -981,6 +1205,8 @@
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Monospacer;
+				PRODUCT_MODULE_NAME = Monospacer;
+				PRODUCT_NAME = Monospacer;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -1055,6 +1281,8 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Monospacer;
+				PRODUCT_MODULE_NAME = Monospacer;
+				PRODUCT_NAME = Monospacer;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1068,6 +1296,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1F36CDB920F6F88100C2A49A /* Build configuration list for PBXNativeTarget "MonospacerTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F36CDBA20F6F88100C2A49A /* Debug */,
+				1F36CDBB20F6F88100C2A49A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1F83D9B320F67D53009B681E /* Build configuration list for PBXProject "Monospacer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
