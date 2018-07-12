@@ -3,7 +3,7 @@
 A framework for macOS, iOS, tvOS, and watchOS to create monospaced variants of fonts.
 
 [![Version](https://img.shields.io/cocoapods/v/Monospacer.svg?style=flat)](https://cocoapods.org/pods/Monospacer)
-[![Documentation](badge.svg)](https://slaunchaman.github.io/Monospacer/)
+[![Documentation](./badge.svg)](https://slaunchaman.github.io/Monospacer/)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![License](https://img.shields.io/cocoapods/l/Monospacer.svg?style=flat)](https://github.com/SlaunchaMan/Monospacer/blob/master/LICENSE)
 ![Platform](https://img.shields.io/cocoapods/p/Monospacer.svg?style=flat)
