@@ -17,6 +17,13 @@ lane :increment_all_version_numbers do |options|
     bump_type: options[:bump_type],
     xcodeproj: "./Example/Example.xcodeproj"
   )
+
+  version = get_version_number(
+    xcodeproj: "./Monospacer.xcodeproj",
+    target: "Monospacer-iOS"
+  )
+
+  version_bump_podspec(version_number: version)
 end
 
 desc "Generates documentation."
