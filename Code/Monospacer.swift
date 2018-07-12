@@ -14,6 +14,7 @@ public typealias FontDescriptor = UIFontDescriptor
 internal let fontFeatureTypeIdentifierKey = UIFontDescriptor.FeatureKey.featureIdentifier
 internal let fontFeatureSelectorIdentifierKey = UIFontDescriptor.FeatureKey.typeIdentifier
 internal let fontDescriptorFeatureSettingsAttribute = UIFontDescriptor.AttributeName.featureSettings
+
 #elseif canImport(AppKit)
 import AppKit
 
@@ -25,29 +26,47 @@ internal let fontFeatureSelectorIdentifierKey = NSFontDescriptor.FeatureKey.sele
 internal let fontDescriptorFeatureSettingsAttribute = NSFontDescriptor.AttributeName.featureSettings
 #endif
 
+@objc public enum MonospacerError: Int, Error {
+    /// Thrown when the font does not support monospaced digits.
+    case fontUnsupported
+
+    #if canImport(AppKit)
+    /// Thrown if creating a font failed.
+    case fontCreationFailed
+    #endif
+}
+
 extension Font {
 
-    #if canImport(UIKit)
     /// Creates and returns the same font, but with monospaced digits.
     ///
-    /// - Note: Not all fonts support this feature. If called on a font that doesn’t
-    ///         support monospaced digits, this will return the same font.
-    @objc(fontWithMonospaceDigits)
-    public var withMonospaceDigits: Font {
-        return Font(descriptor: fontDescriptor.withMonospaceDigits,
-                    size: pointSize)
-    }
-    #elseif canImport(AppKit)
-    /// Creates and returns the same font, but with monospaced digits.
+    /// - Throws:
+    ///     - `MonospacerError.fontUnsupported` if the font does not support
+    ///       monospaced digits.
+    ///     - `MonospacerError.fontCreationFailed` if creating the new font fails
+    ///       (macOS only).
     ///
-    /// - Note: Not all fonts support this feature. If called on a font that doesn’t
-    ///         support monospaced digits, this will return the same font.
-    @objc(fontWithMonospaceDigits)
-    public var withMonospaceDigits: Font? {
-        return Font(descriptor: fontDescriptor.withMonospaceDigits,
-                    size: pointSize)
+    /// - Returns: The font modified to include the monospaced digits selector.
+    @objc(fontWithMonospaceDigitsError:)
+    public func withMonospaceDigits() throws -> Font {
+        let newFont = Font(descriptor: fontDescriptor.withMonospaceDigits,
+                           size: pointSize)
+
+        #if canImport(AppKit)
+        guard let font = newFont else {
+            throw MonospacerError.fontCreationFailed
+        }
+        #else
+        let font = newFont
+        #endif
+
+        guard font.fontDescriptor.hasMonospacedFontSelector else {
+            throw MonospacerError.fontUnsupported
+        }
+
+        return font
     }
-    #endif
+
 }
 
 extension FontDescriptor {
@@ -71,14 +90,18 @@ extension FontDescriptor {
     /// enabled.
     @objc public var hasMonospacedFontSelector: Bool {
         guard
-            let featureSettings = fontAttributes[fontDescriptorFeatureSettingsAttribute]
+            let featureSettings =
+            fontAttributes[fontDescriptorFeatureSettingsAttribute]
                 as? [[String: Int]]
             else { return false }
 
-        return featureSettings.contains(where: { settings -> Bool in
-            return settings[fontFeatureTypeIdentifierKey.rawValue] == kNumberSpacingType &&
-                settings[fontFeatureSelectorIdentifierKey.rawValue] == kMonospacedNumbersSelector
-        })
+        return featureSettings.contains { s -> Bool in
+            return (
+                s[fontFeatureTypeIdentifierKey.rawValue] == kNumberSpacingType &&
+                    s[fontFeatureSelectorIdentifierKey.rawValue] ==
+                kMonospacedNumbersSelector
+            )
+        }
     }
 
 }

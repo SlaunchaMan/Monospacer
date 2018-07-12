@@ -15,7 +15,7 @@ class MonospacerFontTests: XCTestCase {
 
     override func setUp() {
         originalFont = Font.systemFont(ofSize: 42)
-        modifiedFont = originalFont?.withMonospaceDigits
+        modifiedFont = try! originalFont?.withMonospaceDigits()
     }
 
     func testSendingAFontReturnsAFont() {
@@ -38,9 +38,16 @@ class MonospacerFontTests: XCTestCase {
         XCTAssertTrue(modifiedFont.fontDescriptor.hasMonospacedFontSelector)
     }
 
-    func testThatUnsupportedFontsDoNotReturnNil() {
+    func testThatUnsupportedFontsThrow() {
         let font = Font(name: "Times New Roman", size: 42)!
-        XCTAssertFalse(font.fontDescriptor.hasMonospacedFontSelector)
+
+        XCTAssertThrowsError(
+            try font.withMonospaceDigits(),
+            "Attempting to create a monospace-digit version of an unsupported font should fail") { error in
+                let error = error as? MonospacerError
+
+                XCTAssertEqual(error, MonospacerError.fontUnsupported)
+        }
     }
 
 }

@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="watchOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="14234.1"/>
     </dependencies>
@@ -11,7 +12,7 @@
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
             <objects>
-                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Example_watchOS" customModuleProvider="target">
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController">
                     <items>
                         <label alignment="left" text="Monospaced:" id="lAE-md-134">
                             <fontDescription key="font" style="UICTFontTextStyleHeadline"/>
@@ -29,8 +30,8 @@
                         <label alignment="left" text="99 88 77 66 55 44 33 22 11" minimumScaleFactor="0.5" id="1Px-gY-O0n"/>
                     </items>
                     <connections>
-                        <outlet property="firstLabel" destination="rMN-Cp-hTC" id="NXh-jt-QpB"/>
-                        <outlet property="secondLabel" destination="zb2-ZD-PVJ" id="c62-E7-t36"/>
+                        <outlet property="firstLabel" destination="rMN-Cp-hTC" id="GbT-Bo-2ed"/>
+                        <outlet property="secondLabel" destination="zb2-ZD-PVJ" id="F44-Kx-jnx"/>
                     </connections>
                 </controller>
             </objects>

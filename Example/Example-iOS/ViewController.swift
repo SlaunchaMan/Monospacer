@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         monospacedLabels?.forEach { label in
-            label.font = label.font.withMonospaceDigits
+            label.font = try! label.font.withMonospaceDigits()
         }
     }
 

@@ -18,8 +18,22 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        [firstLabel!, secondLabel!].forEach { label in
-            label.font = label.font?.withMonospaceDigits
+        guard let firstLabel = firstLabel, let secondLabel = secondLabel
+            else { return }
+        do {
+            let font = try firstLabel.font!.withMonospaceDigits()
+
+            firstLabel.font = font
+            secondLabel.font = font
+        }
+        catch MonospacerError.fontUnsupported {
+            NSLog("Whoops! This font isn't supported!")
+        }
+        catch MonospacerError.fontCreationFailed {
+            NSLog("Uh-oh. Creating this font failed.")
+        }
+        catch {
+            fatalError("Unexpected error: \(error.localizedDescription)")
         }
     }
 

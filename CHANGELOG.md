@@ -1,3 +1,9 @@
+# 0.3.0
+
+- Adds `MonospacerError` enum and begins throwing `MonospacerError.fontUnsupported` errors for unsupported fonts
+- macOS: Throw a `MonospacerError.fontCreationFailed` error instead of returning `nil` fonts
+- Changes watchOS example interface controller to Objective-C to demonstrate Objective-C error handling
+
 # 0.2.0
 
 - Adds tests for macOS, iOS, and tvOS

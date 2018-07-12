@@ -42,7 +42,7 @@ To integrate Monospacer manually into your project, drag `Monospacer.xcodeproj` 
 To use Monospacer, use the extension on `UIFont` (`NSFont` for macOS):
 
 ```Swift
-let newFont = myFont.withMonospaceDigits
+let newFont = try? myFont.withMonospaceDigits()
 ```
 
 You can also use this on a font descriptor to add the monospaced digits attribute (useful if you need to perform other modifications to the descriptor before using it to create a font):
@@ -56,6 +56,50 @@ let newFontDescriptor = myFontDescrpitor.withMonospaceDigits
 Monospacer also works with Objective-C:
 
 ```Objective-C
-UIFont *newFont = myFont.fontWithMonospaceDigits;
+UIFont *newFont = [myFont fontWithMonospaceDigitsError:NULL];
+
 UIFontDescriptor *newFontDescriptor = myFontDescriptor.descriptorForMonospaceDigits;
+```
+
+## Error Handling
+
+Not all fonts support monospaced digits. In the case where a font doesn’t support this feature, Monospacer throws a `MonospacerError.fontUnsupported` error. On macOS, if font creations fails, Monospacer throws a `MonospacerError.fontCreationFailed` error.  You can handle these in Swift or Objective-C:
+
+```Swift
+// Swift
+do {
+    let font = try someFont.withMonospaceDigits()
+
+    firstLabel.font = font
+    secondLabel.font = font
+}
+catch MonospacerError.fontUnsupported {
+    NSLog("Whoops! This font isn't supported!")
+}
+catch MonospacerError.fontCreationFailed {
+    NSLog("Uh-oh. Creating this font failed.")
+}
+catch {
+    fatalError("Unexpected error: \(error.localizedDescription)")
+}
+```
+
+```Objective-C
+// Objective-C
+NSError *error = nil;
+UIFont *font = [font fontWithMonospaceDigitsError:&error];
+
+if (font == nil) {
+    if (error.domain == MonospacerErrorDomain &&
+        error.code == MonospacerErrorFontUnsupported) {
+        NSLog(@"Whoops! This font isn't supported!");
+    }
+}
+```
+If you don’t care about the errors, you can safely ignore them:
+
+```Swift
+let newFont = try? font.withMonospaceDigits()
+
+myLabel.font = newFont ?? font
 ```

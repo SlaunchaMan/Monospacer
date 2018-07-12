@@ -17,7 +17,6 @@
 		1F02EDEE20F69109006D9AFD /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F02EDEC20F69109006D9AFD /* Interface.storyboard */; };
 		1F02EDF020F69109006D9AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F02EDEF20F69109006D9AFD /* Assets.xcassets */; };
 		1F02EDF720F6910A006D9AFD /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F02EDF620F69109006D9AFD /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1F02EDFC20F6910A006D9AFD /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F02EDFB20F6910A006D9AFD /* InterfaceController.swift */; };
 		1F02EDFE20F6910A006D9AFD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F02EDFD20F6910A006D9AFD /* ExtensionDelegate.swift */; };
 		1F02EE0020F6910A006D9AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F02EDFF20F6910A006D9AFD /* Assets.xcassets */; };
 		1F02EE0420F6910A006D9AFD /* Example-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1F02EDEA20F69109006D9AFD /* Example-watchOS.app */; };
@@ -35,6 +34,7 @@
 		1F02EE3620F6948D006D9AFD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F02EE3420F6948D006D9AFD /* Main.storyboard */; };
 		1F02EE4920F69554006D9AFD /* Monospacer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F02EE4820F69554006D9AFD /* Monospacer.framework */; };
 		1F02EE4A20F69554006D9AFD /* Monospacer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F02EE4820F69554006D9AFD /* Monospacer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1F36CDEA20F70C1000C2A49A /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F36CDE920F70C1000C2A49A /* InterfaceController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -137,7 +137,6 @@
 		1F02EDEF20F69109006D9AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F02EDF120F69109006D9AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F02EDF620F69109006D9AFD /* Example-watchOS Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Example-watchOS Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1F02EDFB20F6910A006D9AFD /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		1F02EDFD20F6910A006D9AFD /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		1F02EDFF20F6910A006D9AFD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F02EE0120F6910A006D9AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -157,6 +156,8 @@
 		1F02EE3720F6948D006D9AFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F02EE3820F6948D006D9AFD /* Example_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Example_macOS.entitlements; sourceTree = "<group>"; };
 		1F02EE4820F69554006D9AFD /* Monospacer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Monospacer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1F36CDE820F70C1000C2A49A /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		1F36CDE920F70C1000C2A49A /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,7 +250,8 @@
 		1F02EDFA20F6910A006D9AFD /* Example-watchOS Extension */ = {
 			isa = PBXGroup;
 			children = (
-				1F02EDFB20F6910A006D9AFD /* InterfaceController.swift */,
+				1F36CDE820F70C1000C2A49A /* InterfaceController.h */,
+				1F36CDE920F70C1000C2A49A /* InterfaceController.m */,
 				1F02EDFD20F6910A006D9AFD /* ExtensionDelegate.swift */,
 				1F02EDFF20F6910A006D9AFD /* Assets.xcassets */,
 				1F02EE0120F6910A006D9AFD /* Info.plist */,
@@ -394,6 +396,7 @@
 					};
 					1F02EDF520F69109006D9AFD = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 					1F02EE1420F692C9006D9AFD = {
 						CreatedOnToolsVersion = 10.0;
@@ -488,7 +491,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F02EDFE20F6910A006D9AFD /* ExtensionDelegate.swift in Sources */,
-				1F02EDFC20F6910A006D9AFD /* InterfaceController.swift in Sources */,
+				1F36CDEA20F70C1000C2A49A /* InterfaceController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,7 +701,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -718,7 +721,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -737,8 +740,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-watchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -750,6 +754,7 @@
 				PRODUCT_NAME = "${TARGET_NAME}";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -760,8 +765,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-watchOS Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -785,7 +791,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				IBSC_MODULE = Example_watchOS_Extension;
 				INFOPLIST_FILE = "Example-watchOS/Info.plist";
@@ -805,7 +811,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				IBSC_MODULE = Example_watchOS_Extension;
 				INFOPLIST_FILE = "Example-watchOS/Info.plist";
@@ -825,7 +831,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -847,7 +853,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -871,7 +877,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -894,7 +900,7 @@
 				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
