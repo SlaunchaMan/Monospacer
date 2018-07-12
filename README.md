@@ -69,9 +69,6 @@ Not all fonts support monospaced digits. In the case where a font doesn’t supp
 // Swift
 do {
     let font = try someFont.withMonospaceDigits()
-
-    firstLabel.font = font
-    secondLabel.font = font
 }
 catch MonospacerError.fontUnsupported {
     NSLog("Whoops! This font isn't supported!")
