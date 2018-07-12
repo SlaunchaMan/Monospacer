@@ -14,7 +14,7 @@ class MonospacerFontTests: XCTestCase {
     var modifiedFont: Font!
 
     override func setUp() {
-        originalFont = Font.systemFont(ofSize: Font.systemFontSize)
+        originalFont = Font.systemFont(ofSize: 42)
         modifiedFont = originalFont?.withMonospaceDigits
     }
 
@@ -34,12 +34,12 @@ class MonospacerFontTests: XCTestCase {
         XCTAssertEqual(originalFont?.pointSize, modifiedFont?.pointSize)
     }
 
-    func testThatTheModifiedFontHasTheCorrectAttributes() {
+    func testThatSupportedFontsHaveTheCorrectAttributes() {
         XCTAssertTrue(modifiedFont.fontDescriptor.hasMonospacedFontSelector)
     }
 
     func testThatUnsupportedFontsDoNotReturnNil() {
-        let font = UIFont(name: "Zapfino", size: UIFont.systemFontSize)!
+        let font = UIFont(name: "Times New Roman", size: 42)!
         XCTAssertFalse(font.fontDescriptor.hasMonospacedFontSelector)
     }
 
@@ -48,14 +48,14 @@ class MonospacerFontTests: XCTestCase {
 class MonospacerFontDescriptorTests: XCTestCase {
 
     func testModifyingADescriptorAddsAttributes() {
-        let font = UIFont.systemFont(ofSize: UIFont.systemFontSize)
+        let font = UIFont.systemFont(ofSize: 42)
         XCTAssertFalse(font.fontDescriptor.hasMonospacedFontSelector)
         let modifiedFontDescriptor = font.fontDescriptor.withMonospaceDigits
         XCTAssertTrue(modifiedFontDescriptor.hasMonospacedFontSelector)
     }
 
     func testModifyingUnsupportedDescriptors() {
-        let font = UIFont(name: "Zapfino", size: UIFont.systemFontSize)!
+        let font = UIFont(name: "Times New Roman", size: 42)!
         XCTAssertFalse(font.fontDescriptor.hasMonospacedFontSelector)
         let modifiedFontDescriptor = font.fontDescriptor.withMonospaceDigits
         XCTAssertTrue(modifiedFontDescriptor.hasMonospacedFontSelector)
