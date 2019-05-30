@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Monospacer"
-  s.version      = "0.4.0"
+  s.version      = "0.5.0"
   s.summary      = "A small framework to generate monospaced fonts."
 
   s.description  = <<-DESC
@@ -15,7 +15,7 @@ fonts.
   s.homepage           = "https://github.com/SlaunchaMan/Monospacer"
 
   s.module_name = "Monospacer"
-  s.swift_version = "4.0"
+  s.swift_versions = ['4.0', '4.1', '4.2', '5.0']
 
   s.osx.deployment_target = "10.9"
   s.ios.deployment_target = "8.0"

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14295.6" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Uy-x9-1RP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9Uy-x9-1RP">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14270.1"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -13,67 +13,72 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bno-ev-qgK"/>
+                        <viewControllerLayoutGuide type="bottom" id="ll7-xR-2vz"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PaV-1y-xrh">
-                                <rect key="frame" x="16" y="84" width="303" height="88.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monospaced Labels:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzN-yE-KK2">
-                                        <rect key="frame" x="0.0" y="0.0" width="303" height="31.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="111 222 333 444 555 666 777 888 999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POP-LC-D8E">
-                                        <rect key="frame" x="0.0" y="39.5" width="303" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 888 777 666 555 444 333 222 111" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekA-Tg-tF9">
-                                        <rect key="frame" x="0.0" y="68" width="303" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FWT-tT-cbn">
-                                <rect key="frame" x="16" y="192.5" width="303" height="88.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Labels:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zca-GU-VsR">
-                                        <rect key="frame" x="0.0" y="0.0" width="303" height="31.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="111 222 333 444 555 666 777 888 999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuS-xw-yvA">
-                                        <rect key="frame" x="0.0" y="39.5" width="303" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 888 777 666 555 444 333 222 111" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkn-76-by3">
-                                        <rect key="frame" x="0.0" y="68" width="303" height="20.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monospaced Labels:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzN-yE-KK2">
+                                <rect key="frame" x="16" y="64" width="343" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="111 222 333 444 555 666 777 888 999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="POP-LC-D8E">
+                                <rect key="frame" x="16" y="97" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Labels:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zca-GU-VsR">
+                                <rect key="frame" x="16" y="178.5" width="343" height="31.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="111 222 333 444 555 666 777 888 999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuS-xw-yvA">
+                                <rect key="frame" x="16" y="211.5" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 888 777 666 555 444 333 222 111" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tkn-76-by3">
+                                <rect key="frame" x="16" y="235.5" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999 888 777 666 555 444 333 222 111" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ekA-Tg-tF9">
+                                <rect key="frame" x="16" y="121" width="343" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="PaV-1y-xrh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="BPI-L9-0N1"/>
-                            <constraint firstItem="FWT-tT-cbn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="IZi-HW-JFM"/>
-                            <constraint firstItem="FWT-tT-cbn" firstAttribute="top" secondItem="PaV-1y-xrh" secondAttribute="bottom" constant="20" id="VcF-L1-Hhx"/>
-                            <constraint firstItem="FWT-tT-cbn" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="iuQ-my-IYH"/>
-                            <constraint firstItem="PaV-1y-xrh" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="oeU-o8-HQh"/>
-                            <constraint firstItem="PaV-1y-xrh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="u3R-1u-Har"/>
+                            <constraint firstItem="POP-LC-D8E" firstAttribute="trailing" secondItem="rzN-yE-KK2" secondAttribute="trailing" id="0Bg-hV-0BS"/>
+                            <constraint firstItem="DuS-xw-yvA" firstAttribute="trailing" secondItem="Zca-GU-VsR" secondAttribute="trailing" id="29W-Ul-4he"/>
+                            <constraint firstItem="rzN-yE-KK2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="46y-Px-qHJ"/>
+                            <constraint firstItem="tkn-76-by3" firstAttribute="firstBaseline" secondItem="DuS-xw-yvA" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="4ya-g9-LQl"/>
+                            <constraint firstItem="ekA-Tg-tF9" firstAttribute="trailing" secondItem="POP-LC-D8E" secondAttribute="trailing" id="5Kj-qi-ViV"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Zca-GU-VsR" secondAttribute="trailing" id="7fh-pA-Eh8"/>
+                            <constraint firstItem="POP-LC-D8E" firstAttribute="firstBaseline" secondItem="rzN-yE-KK2" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="8Bp-hv-79C"/>
+                            <constraint firstItem="Zca-GU-VsR" firstAttribute="firstBaseline" secondItem="ekA-Tg-tF9" secondAttribute="baseline" multiplier="1.25" constant="32" symbolType="layoutAnchor" id="Ejg-6p-3MP"/>
+                            <constraint firstItem="DuS-xw-yvA" firstAttribute="firstBaseline" secondItem="Zca-GU-VsR" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="K2R-cG-KYU"/>
+                            <constraint firstItem="Zca-GU-VsR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="KR1-6e-uhZ"/>
+                            <constraint firstItem="POP-LC-D8E" firstAttribute="leading" secondItem="rzN-yE-KK2" secondAttribute="leading" id="Mcd-1L-3zB"/>
+                            <constraint firstItem="ekA-Tg-tF9" firstAttribute="leading" secondItem="POP-LC-D8E" secondAttribute="leading" id="PRw-nh-USW"/>
+                            <constraint firstItem="tkn-76-by3" firstAttribute="leading" secondItem="DuS-xw-yvA" secondAttribute="leading" id="fkb-wk-BHQ"/>
+                            <constraint firstItem="rzN-yE-KK2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="kYl-8E-STk"/>
+                            <constraint firstItem="ekA-Tg-tF9" firstAttribute="firstBaseline" secondItem="POP-LC-D8E" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="kre-bI-Bdh"/>
+                            <constraint firstItem="rzN-yE-KK2" firstAttribute="top" secondItem="bno-ev-qgK" secondAttribute="bottom" id="pGj-gQ-9rx"/>
+                            <constraint firstItem="DuS-xw-yvA" firstAttribute="leading" secondItem="Zca-GU-VsR" secondAttribute="leading" id="zRo-zb-vo2"/>
+                            <constraint firstItem="tkn-76-by3" firstAttribute="trailing" secondItem="DuS-xw-yvA" secondAttribute="trailing" id="zyR-Iv-RDa"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Monospacer" id="Q0Z-5P-gjs"/>
                     <connections>
