@@ -34,7 +34,7 @@ Run `carthage update` to build the framework. Then follow the rest of the steps 
 
 ## Manually
 
-To integrate Monospacer manually into your project, drag `Monospacer.xcodeproj` into your Xcode project, then use the correct `Monospacer.framework` for your platform.
+To integrate Monospacer manually into your project, drag `Monospacer.swift` into your Xcode project and add it to all of the targets in which you want to use it.
 
 # Using Monospacer
 
