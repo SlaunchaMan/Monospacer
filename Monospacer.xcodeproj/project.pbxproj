@@ -83,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F00F16623398A7C00614846 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		1F02EDD320F689CC006D9AFD /* Monospacer.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Monospacer.podspec; sourceTree = "<group>"; };
 		1F02EE6420F69722006D9AFD /* Example.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Example.xcodeproj; path = Example/Example.xcodeproj; sourceTree = "<group>"; };
 		1F36CDB120F6F88100C2A49A /* MonospacerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MonospacerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +158,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F00F16523398A5E00614846 /* Monospacer */ = {
+			isa = PBXGroup;
+			children = (
+				1F83D9DF20F67DE7009B681E /* Monospacer.swift */,
+			);
+			path = Monospacer;
+			sourceTree = "<group>";
+		};
 		1F02EE6520F69722006D9AFD /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,24 +178,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1F36CDB220F6F88100C2A49A /* Tests */ = {
+		1F36CDB220F6F88100C2A49A /* MonospacerTests */ = {
 			isa = PBXGroup;
 			children = (
 				1F36CDB320F6F88100C2A49A /* MonospacerTests.swift */,
 				1F36CDB520F6F88100C2A49A /* Info.plist */,
 			);
-			path = Tests;
+			path = MonospacerTests;
 			sourceTree = "<group>";
 		};
 		1F83D9AF20F67D53009B681E = {
 			isa = PBXGroup;
 			children = (
+				1F00F16623398A7C00614846 /* Package.swift */,
 				1FDB0C4E20F6A60F009F1B02 /* README.md */,
 				1F36CDE020F7054900C2A49A /* CHANGELOG.md */,
 				1F02EDD320F689CC006D9AFD /* Monospacer.podspec */,
 				1F02EE6420F69722006D9AFD /* Example.xcodeproj */,
-				1F83D9DE20F67DD8009B681E /* Code */,
-				1F36CDB220F6F88100C2A49A /* Tests */,
+				1F83D9DE20F67DD8009B681E /* Sources */,
 				1FE3A37320F69B4A00723608 /* Supporting Files */,
 				1F83D9BC20F67D73009B681E /* Products */,
 			);
@@ -206,12 +215,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1F83D9DE20F67DD8009B681E /* Code */ = {
+		1F83D9DE20F67DD8009B681E /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				1F83D9DF20F67DE7009B681E /* Monospacer.swift */,
+				1F00F16523398A5E00614846 /* Monospacer */,
+				1F36CDB220F6F88100C2A49A /* MonospacerTests */,
 			);
-			path = Code;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		1FE3A37320F69B4A00723608 /* Supporting Files */ = {
@@ -674,7 +684,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Sources/MonospacerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -739,7 +749,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Sources/MonospacerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -809,7 +819,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Sources/MonospacerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -873,7 +883,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Sources/MonospacerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -945,7 +955,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Sources/MonospacerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -1010,7 +1020,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				INFOPLIST_FILE = Tests/Info.plist;
+				INFOPLIST_FILE = Sources/MonospacerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

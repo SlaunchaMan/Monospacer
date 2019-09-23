@@ -8,6 +8,19 @@
 import XCTest
 @testable import Monospacer
 
+#if canImport(AppKit)
+// This method is swizzled so we can test what happens if
+// `NSFont.init(descriptor:size:)` returns `nil`.
+extension Font {
+    @objc fileprivate static func swizzledFont(
+        descriptor: NSFontDescriptor,
+        size: CGFloat
+    ) -> Font? {
+        return nil
+    } 
+}
+#endif
+
 class MonospacerFontTests: XCTestCase {
 
     var originalFont: Font!
@@ -49,6 +62,37 @@ class MonospacerFontTests: XCTestCase {
                 XCTAssertEqual(error, MonospacerError.fontUnsupported)
         }
     }
+    
+    #if canImport(AppKit)
+    func testFontCreationFailuresThrow() {
+        
+        let fontClass = Font.self
+        
+        let originalMethod = class_getClassMethod(
+            fontClass,
+            #selector(Font.init(descriptor:size:))
+        )
+        
+        let replacementMethod = class_getClassMethod(
+            fontClass,
+            #selector(Font.swizzledFont(descriptor:size:))
+        )
+        
+        method_exchangeImplementations(originalMethod!, replacementMethod!)
+        
+        let font = Font(name: "Times New Roman", size: 42)!
+        
+        XCTAssertThrowsError(
+            try font.withMonospaceDigits(),
+            "If font creation fails, it should throw") { error in
+                let error = error as? MonospacerError
+
+                XCTAssertEqual(error, MonospacerError.fontCreationFailed)
+        }
+
+        method_exchangeImplementations(originalMethod!, replacementMethod!)
+    }
+    #endif
 
 }
 
