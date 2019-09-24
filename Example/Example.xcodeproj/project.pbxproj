@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -385,7 +385,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1000;
-				LastUpgradeCheck = 1000;
+				LastUpgradeCheck = 1100;
 				ORGANIZATIONNAME = "Jeff Kelley";
 				TargetAttributes = {
 					1F02EDB020F687D7006D9AFD = {
@@ -408,7 +408,7 @@
 				};
 			};
 			buildConfigurationList = 1F02EDAC20F687D7006D9AFD /* Build configuration list for PBXProject "Example" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -874,6 +874,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = UCFNS9576M;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Example-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -896,6 +897,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = UCFNS9576M;
+				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "Example-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

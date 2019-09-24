@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -434,7 +434,7 @@
 				};
 			};
 			buildConfigurationList = 1F83D9B320F67D53009B681E /* Build configuration list for PBXProject "Monospacer" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1177,7 +1177,6 @@
 				);
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
-				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Monospacer;
 				PRODUCT_MODULE_NAME = Monospacer;
 				PRODUCT_NAME = Monospacer;
