@@ -31,4 +31,12 @@ fonts.
   s.ios.framework = "UIKit"
   s.watchos.framework = "UIKit"
   s.tvos.framework = "UIKit"
+
+  s.test_spec 'MonospacerTests' do |ts|
+    ts.osx.deployment_target = "10.9"
+    ts.ios.deployment_target = "8.0"
+    ts.tvos.deployment_target = "9.0"
+
+    ts.source_files = "Sources/MonospacerTests/*.swift"
+  end
 end
