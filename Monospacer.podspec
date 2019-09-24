@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "Monospacer"
-  s.version      = "0.5.0"
+  s.version      = "0.6.0"
   s.summary      = "A small framework to generate monospaced fonts."
 
   s.description  = <<-DESC
@@ -25,7 +25,7 @@ fonts.
   s.source       = { :git => "https://github.com/SlaunchaMan/Monospacer.git",
                      :tag => "#{s.version}" }
 
-  s.source_files  = "Code/*.swift"
+  s.source_files  = "Sources/Monospacer/*.swift"
 
   s.osx.framework = "AppKit"
   s.ios.framework = "UIKit"
