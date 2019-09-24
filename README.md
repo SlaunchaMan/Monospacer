@@ -10,6 +10,16 @@ A framework for macOS, iOS, tvOS, and watchOS to create monospaced variants of f
 
 # Installation
 
+## Swift Package Manager
+
+To use Monospacer with [Swift Package Manager](https://swift.org/package-manager/), add a dependency to your `Package.swift` file:
+
+```Swift
+dependencies: [
+.package(url: "https://github.com/SlaunchaMan/Monospacer.git", from: "0.6.0")
+]
+```
+
 ## CocoaPods
 
 To use Monospacer with [CocoaPods](https://cocoapods.org), add a dependency to your `Podfile`:
