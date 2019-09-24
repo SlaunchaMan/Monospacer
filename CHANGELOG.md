@@ -1,3 +1,7 @@
+# 0.6.0
+
+- Support for Swift Package Manager and Swift 5.1
+
 # 0.5.0
 
 - Updates to Swift 5 and Xcode 10.2.1 recommendations
