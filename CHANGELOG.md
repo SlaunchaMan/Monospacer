@@ -1,3 +1,7 @@
+# 0.6.1
+
+- Support for macOS Catalyst
+
 # 0.6.0
 
 - Support for Swift Package Manager and Swift 5.1
