@@ -58,7 +58,7 @@ extension Font {
         let newFont = Font(descriptor: fontDescriptor.withMonospaceDigits,
                            size: pointSize)
 
-        #if canImport(AppKit)
+        #if os(macOS)
         guard let font = newFont else {
             throw MonospacerError.fontCreationFailed
         }

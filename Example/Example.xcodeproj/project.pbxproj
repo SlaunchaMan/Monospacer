@@ -19,7 +19,7 @@
 		1F02EDF720F6910A006D9AFD /* Example-watchOS Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 1F02EDF620F69109006D9AFD /* Example-watchOS Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		1F02EDFE20F6910A006D9AFD /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F02EDFD20F6910A006D9AFD /* ExtensionDelegate.swift */; };
 		1F02EE0020F6910A006D9AFD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F02EDFF20F6910A006D9AFD /* Assets.xcassets */; };
-		1F02EE0420F6910A006D9AFD /* Example-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1F02EDEA20F69109006D9AFD /* Example-watchOS.app */; };
+		1F02EE0420F6910A006D9AFD /* Example-watchOS.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1F02EDEA20F69109006D9AFD /* Example-watchOS.app */; platformFilter = ios; };
 		1F02EE0E20F691DF006D9AFD /* Monospacer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F02EE0D20F691DF006D9AFD /* Monospacer.framework */; };
 		1F02EE0F20F691DF006D9AFD /* Monospacer.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1F02EE0D20F691DF006D9AFD /* Monospacer.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1F02EE1820F692C9006D9AFD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F02EE1720F692C9006D9AFD /* AppDelegate.swift */; };
@@ -158,6 +158,7 @@
 		1F02EE4820F69554006D9AFD /* Monospacer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Monospacer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F36CDE820F70C1000C2A49A /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
 		1F36CDE920F70C1000C2A49A /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		1F58F48323D207F20091269F /* Example-iOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Example-iOS.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +228,7 @@
 		1F02EDB320F687D7006D9AFD /* Example-iOS */ = {
 			isa = PBXGroup;
 			children = (
+				1F58F48323D207F20091269F /* Example-iOS.entitlements */,
 				1F02EDB420F687D7006D9AFD /* AppDelegate.swift */,
 				1F02EDB620F687D7006D9AFD /* ViewController.swift */,
 				1F02EDB820F687D7006D9AFD /* Main.storyboard */,
@@ -524,6 +526,7 @@
 		};
 		1F02EE0320F6910A006D9AFD /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 1F02EDE920F69109006D9AFD /* Example-watchOS */;
 			targetProxy = 1F02EE0220F6910A006D9AFD /* PBXContainerItemProxy */;
 		};
@@ -701,8 +704,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Example-iOS/Example-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -711,6 +716,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -720,8 +726,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "Example-iOS/Example-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 11;
+				DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = YES;
 				DEVELOPMENT_TEAM = UCFNS9576M;
 				INFOPLIST_FILE = "Example-iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -730,6 +738,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.slaunchaman.Example;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 			};

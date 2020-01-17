@@ -8,7 +8,7 @@
 import XCTest
 @testable import Monospacer
 
-#if canImport(AppKit)
+#if os(macOS)
 // This method is swizzled so we can test what happens if
 // `NSFont.init(descriptor:size:)` returns `nil`.
 extension Font {
@@ -40,7 +40,18 @@ class MonospacerFontTests: XCTestCase {
     }
 
     func testThatSendingAFontReturnsAFontWithTheSameName() {
-        XCTAssertEqual(originalFont?.fontName, modifiedFont?.fontName)
+        // On macOS, you start with ".AppleSystemUIFont" and end up with
+        // ".SFNS-Regular".
+        if #available(macOS 10.0, *) {
+            XCTAssertTrue(
+                (originalFont?.fontName == modifiedFont?.fontName) ||
+                    (originalFont?.fontName == ".AppleSystemUIFont" &&
+                        modifiedFont?.fontName == ".SFNS-Regular")
+            )
+        }
+        else {
+            XCTAssertEqual(originalFont?.fontName, modifiedFont?.fontName)
+        }
     }
 
     func testThatSendingAFontReturnsAFontWithTheSameSize() {
@@ -63,7 +74,7 @@ class MonospacerFontTests: XCTestCase {
         }
     }
     
-    #if canImport(AppKit)
+    #if os(macOS)
     func testFontCreationFailuresThrow() {
         
         let fontClass = Font.self
@@ -98,9 +109,15 @@ class MonospacerFontTests: XCTestCase {
 
 class MonospacerFontDescriptorTests: XCTestCase {
 
-    func testModifyingADescriptorAddsAttributes() {
+    func testModifyingADescriptorAddsAttributes() throws {
+        #if targetEnvironment(macCatalyst)
+        let font = try XCTUnwrap(Font(name: "Helvetica", size: 42))
+        #else
         let font = Font.systemFont(ofSize: 42)
+        #endif
+        
         XCTAssertFalse(font.fontDescriptor.hasMonospacedFontSelector)
+        
         let modifiedFontDescriptor = font.fontDescriptor.withMonospaceDigits
         XCTAssertTrue(modifiedFontDescriptor.hasMonospacedFontSelector)
     }
